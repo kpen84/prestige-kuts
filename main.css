@@ -11,8 +11,8 @@ html{
     min-width: 0;
     box-sizing: border-box;
     color: antiquewhite;
-    text-decoration: none;
     list-style: none;
+    text-decoration: none;
 }
 
 /*ul,
