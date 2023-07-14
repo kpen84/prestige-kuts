@@ -11,7 +11,7 @@ db.once('open', () => console.log('Connected to Database'))
 
 app.use(express.json())
 
-const clientsRouter = require('./routes/clients')
-app.use('/clients', clientsRouter)
+const bookingRouter = require('./routes/booking')
+app.use('/booking', bookingRouter)
 
-app.listen(3000, () => console.log('Server running on localhost:3000/clients'))
+app.listen(3000, () => console.log('Server running on localhost:3000/booking'))
