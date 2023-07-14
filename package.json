@@ -4,14 +4,15 @@
   "description": "Client Website/Project",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js",
+    "dev": "nodemon server.js",
     "serve": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^7.3.4"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
