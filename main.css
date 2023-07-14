@@ -22,11 +22,11 @@ a{
   list-style: none;
 }*/
 
-body{
-    /*background-image: url(..images/background.jpg);
+/*body{
+    background-image: url(..images/background.jpg);
     background-size: cover;
-    background-repeat: no-repeat;*/
-}
+    background-repeat: no-repeat;
+}*/
 
 .main-content{
   z-index: 1000;
@@ -140,6 +140,7 @@ main{
   justify-content: center; 
   align-items: center;
 }
+
 .mySlides img{
   height: 50%;
 }
