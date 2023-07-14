@@ -14,4 +14,4 @@ app.use(express.json())
 const clientsRouter = require('./routes/clients')
 app.use('/clients', clientsRouter)
 
-app.listen(3000, () => console.log('Server running on port 3000'))
+app.listen(3000, () => console.log('Server running on localhost:3000/clients'))
