@@ -51,3 +51,38 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "flex";
   dots[slideIndex-1].className += " active";
 }
+
+
+//booking form
+
+const bookingForm = document.getElementById('bookingForm');
+
+bookingForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  const formData = new FormData(bookingForm);
+  const bookingData = Object.fromEntries(formData);
+
+  // Call the function to send bookingData to the API
+  bookAppointment(bookingData);
+});
+
+function bookAppointment(bookingData) {
+  // Send an HTTP request to the API endpoint
+  fetch('/api/bookings', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(bookingData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // Handle the response from the server
+      // Redirect, show a success message, etc.
+    })
+    .catch((error) => {
+      // Handle any errors
+      console.error('Error:', error);
+    });
+}
