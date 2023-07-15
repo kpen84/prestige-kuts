@@ -1,2 +1,2 @@
-get http://localhost:3000/book
+get http://localhost:3000/localhost:3000/book
 
