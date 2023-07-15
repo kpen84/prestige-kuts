@@ -4,15 +4,19 @@ const express = require('express')
 const app = express()
 const  mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+require('dotenv').config();
+const mongoString = process.env.DATABASE_URL
+mongoose.connect(mongoString);
+const database = mongoose.connection
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/booking.html')
+  res.sendFile(__dirname + '/public/book.html')
 })
 
-mongoose.connect('mongodb+srv://kpen84:Jessi2464!@bookings.xdqty2j.mongodb.net/bookings', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://kpen84:Jessi2464!@api.v2y8zt4.mongodb.net/API', { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
@@ -20,7 +24,7 @@ db.once('open', () => console.log('Connected to Database'))
 app.use(express.json())
 
 const bookingRouter = require('./routes/book')
-app.use('/book', bookingRouter)
+app.use('/Appointments', bookingRouter)
 
 const { Schema } = mongoose;
 
