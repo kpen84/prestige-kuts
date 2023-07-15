@@ -1,1 +1,2 @@
-get http://localhost:3000/booking
+get http://localhost:3000/book
+

@@ -1,8 +1,14 @@
 require('dotenv').config()
-
 const express = require('express')
 const app = express()
 const  mongoose = require('mongoose')
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/book.html')
+})
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
@@ -11,8 +17,8 @@ db.once('open', () => console.log('Connected to Database'))
 
 app.use(express.json())
 
-const bookingRouter = require('./routes/booking')
-app.use('/booking', bookingRouter)
+const bookingRouter = require('./routes/book')
+app.use('/book', bookingRouter)
 
 const { Schema } = mongoose;
 
@@ -23,14 +29,15 @@ const bookingSchema = new Schema({
   date: Date,
 });
 
-const Booking = mongoose.model('booking', bookingSchema);
+const booking = mongoose.model('book', bookingSchema);
 
-app.post('/api/bookings', (req, res) => {
+app.post('/', (req, res) => {
     const bookingData = req.body;
   
-    const newBooking = new Booking({
+    const newBooking = new booking({
       barber: bookingData.barber,
       customer: bookingData.customer,
+      email: bookingData.email,
       apptype: bookingData.apptype,
       date: bookingData.date,
     });
@@ -45,4 +52,4 @@ app.post('/api/bookings', (req, res) => {
     });
   });
 
-app.listen(3000, () => console.log('Server running on localhost:3000/booking'))
+app.listen(3000, () => console.log('Server running on localhost:3000'))
