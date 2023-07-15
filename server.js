@@ -24,7 +24,7 @@ db.once('open', () => console.log('Connected to Database'))
 app.use(express.json())
 
 const bookingRouter = require('./routes/book')
-app.use('/Appointments', bookingRouter)
+app.use('/book', bookingRouter)
 
 const { Schema } = mongoose;
 
