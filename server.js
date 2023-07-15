@@ -1,16 +1,18 @@
-require('dotenv').config()
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express')
 const app = express()
 const  mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
+
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/book.html')
+  res.sendFile(__dirname + '/public/booking.html')
 })
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://kpen84:Jessi2464!@bookings.xdqty2j.mongodb.net/bookings', { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
