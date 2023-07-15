@@ -1,14 +1,18 @@
 const dotenv = require('dotenv');
 dotenv.config();
+
 const express = require('express')
 const app = express()
+
 const  mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-require('dotenv').config();
+
 const mongoString = process.env.DATABASE_URL
 mongoose.connect(mongoString);
+
 const database = mongoose.connection
 
+app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
