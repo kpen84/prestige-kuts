@@ -36,6 +36,7 @@ const bookingSchema = new Schema({
   barber: String,
   customer: String,
   apptype: String,
+  email: String,
   date: Date,
 });
 
