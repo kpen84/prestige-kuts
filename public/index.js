@@ -54,40 +54,7 @@ function showSlides(n) {
 
 //HTML Form Submission
 
-document.getElementById('bookingForm').addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    const barber = document.querySelector('.barber').value;
-    const customer = document.querySelector('.customer').value;
-    const apptype = document.querySelector('.apptype').value;
-    const email = document.querySelector('.email').value;
-    const date = document.getElementById('date').value;
-
-    const data = {
-        barber,
-        customer,
-        apptype,
-        email,
-        date
-    };
-
-    fetch('/api/post', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(appointments)
-    })
-    .then(response => response.json())
-    .then(responseData => {
-        console.log(responseData);
-        // Handle the response from the server
-    })
-    .catch(error => {
-        console.error(error);
-        // Handle any errors
-    });
-});
 
 
 
