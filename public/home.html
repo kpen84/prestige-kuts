@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'> </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/main.css">
+    <link type="text/css" rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <title>Prestige Kuts</title>
 </head>
@@ -30,10 +30,7 @@
           </div>
           <div class="instagram">
             <ul><li><a href="https://www.instagram.com/prestigekuts/" class="fa fa-instagram"></a></li></ul>
-          </div>
-            <!--<li><a href="">Info</a></li>  
-            <li><a href="">Gallery</a></li>-->
- 
+          </div> 
         </div>
 
 </header>
@@ -62,7 +59,6 @@
     <div class="main-content">
       <div class="slideshow-container">
 
-        <!-- Full-width ../images with number and caption text -->
         <div class="mySlides fade slide-1-bg">
           <div class="numbertext">1 / 4</div>
           <img src="/images/prestige_logo2.png">
@@ -98,20 +94,38 @@
         <span class="dot" onclick="currentSlide(4)"></span>
       </div>
   
-    </div>
+    </div> 
 
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
 
-    <!--<div class="hero">
-            
-            <div class="hero-logo">
-                <img src="/images/prestige_logo2.png"></img>
-            </div>
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-            <div class="hero-text">
-                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi totam nihil numquam est incidunt sit commodi voluptatem modi nemo iste aliquid et consequatur nostrum, error at, similique vel harum omnis!</h1>
-            </div>
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-    </div>-->
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active",);
+  }
+  slides[slideIndex-1].style.display = "flex";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 
 
@@ -119,8 +133,7 @@
     
 </body>
 
-<script type="text/javascript" src="/index.js"></script>
-<script type="text/javascript" src="/server.js"></script> 
+<script type="text/javascript" src="index.js"></script>
 
 
 </html>
