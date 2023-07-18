@@ -1,36 +1,32 @@
 const express = require('express');
 const router = express.Router();
 
-
 //geting all
 router.get('/', (req, res) => {
     res.send('Hello World');
 });
 
 //getting one
-router.get('/:id', (req, res) => {
-
-});
+router.get('/:id', (req, res) => {});
 
 //creating one
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     const { barber, customer, apptype, email, date } = req.body;
-    // Process the form data as per your requirements
-    // For example, you can store the data in a database, send emails, etc.
-  
+    try {
+        const dataToSave = await data.save();
+        res.redirect('/confirmed.html'); // Redirect to the "confirmed.html" page
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+
     // Send a response to the client
     res.send('Form submitted successfully!');
 });
 
 //updating one
-router.patch('/:id', (req, res) => {
-
-});
+router.patch('/:id', (req, res) => {});
 
 //delete one
-router.delete('/:id', (req, res) => {
-
-});
-
+router.delete('/:id', (req, res) => {});
 
 module.exports = router;
