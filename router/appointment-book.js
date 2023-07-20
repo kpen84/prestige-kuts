@@ -1,12 +1,10 @@
 const express = require('express');
-
 const router = express.Router();
-
-module.exports = router;
+const Model = require('../models/appointment-model');
 
 //Post Method
-router.post('/post', async (req, res) => {
-    const data = new Model({
+router.post('/api/appointments', async (req, res) => {
+    const data = new Appointment({
         barber: req.body.barber,
         customer: req.body.customer,
         email: req.body.email,
@@ -42,4 +40,4 @@ router.delete('/delete/:id', (req, res) => {
     res.send('Delete by ID API');
 });
 
-const Model = require('../models/appointment-model');
+module.exports = router;
