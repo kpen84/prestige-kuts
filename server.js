@@ -17,7 +17,7 @@ database.on('error', (error) => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/book.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 //router
