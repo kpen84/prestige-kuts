@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json());
-app.use(express.static('/public'));
+app.use(express.static('public'));
 
 mongoose.connect(mongoString);
 const database = mongoose.connection;
