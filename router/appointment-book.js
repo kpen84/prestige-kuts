@@ -3,7 +3,7 @@ const router = express.Router();
 const Model = require('../models/appointment-model');
 
 //Post Method
-router.post('/api/appointments', async (req, res) => {
+router.post('/', async (req, res) => {
     const data = new Appointment({
         barber: req.body.barber,
         customer: req.body.customer,

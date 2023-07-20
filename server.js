@@ -8,14 +8,12 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('/public'));
+
 mongoose.connect(mongoString);
 const database = mongoose.connection;
 database.on('error', (error) => {
     console.log(error);
-});
-database.once('connected', () => {
-    console.log('Database Connected');
 });
 
 app.get('/', (req, res) => {
@@ -29,4 +27,7 @@ app.use('/', appointmentRouter);
 
 app.listen(3000, () => {
     console.log(`Server Started at ${3000}`);
+});
+database.once('connected', () => {
+    console.log('Database Connected');
 });
