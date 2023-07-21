@@ -3,13 +3,14 @@ const router = express.Router();
 const Appointment = require('../models/appointment-model');
 
 //Post Method
-router.post('/api', async (req, res) => {
+router.post('/', async (req, res) => {
+    console.log('Success');
     const data = new Appointment({
         barber: req.body.barber,
-        // customer: req.body.customer,
-        // email: req.body.email,
-        // apptype: req.body.apptype,
-        // date: req.body.date,
+        customer: req.body.customer,
+        email: req.body.email,
+        apptype: req.body.apptype,
+        date: req.body.date,
     });
 
     try {
@@ -20,24 +21,24 @@ router.post('/api', async (req, res) => {
     }
 });
 
-// //Get all Method
-// router.get('/getAll', (req, res) => {
-//     res.send('Get All API');
-// });
+//Get all Method
+router.get('/getAll', (req, res) => {
+    res.send('Get All API');
+});
 
-// //Get by ID Method
-// router.get('/getOne/:id', (req, res) => {
-//     res.send(req.params.id);
-// });
+//Get by ID Method
+router.get('/getOne/:id', (req, res) => {
+    res.send(req.params.id);
+});
 
-// //Update by ID Method
-// router.patch('/update/:id', (req, res) => {
-//     res.send('Update by ID API');
-// });
+//Update by ID Method
+router.patch('/update/:id', (req, res) => {
+    res.send('Update by ID API');
+});
 
-// //Delete by ID Method
-// router.delete('/delete/:id', (req, res) => {
-//     res.send('Delete by ID API');
-// });
+//Delete by ID Method
+router.delete('/delete/:id', (req, res) => {
+    res.send('Delete by ID API');
+});
 
 module.exports = router;
