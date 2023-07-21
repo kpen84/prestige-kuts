@@ -12,7 +12,7 @@ html {
     font-family: 'Poppins', sans-serif;
     min-width: 0;
     box-sizing: border-box;
-    color: black;
+    color: rgb(255, 255, 255);
     list-style: none;
     text-decoration: none;
 }
@@ -109,12 +109,14 @@ main {
     background-image: url(../images/shop_floor.jpg);
     background-size: cover;
     overflow: hidden;
+    background-position: center;
 }
 
 .slide-2-bg {
     background-image: url(images/ralphy.jpg);
     background-size: cover;
     overflow: hidden;
+    background-position: center;
 }
 
 .slide-3-bg {
