@@ -40,5 +40,5 @@ function showSlides(n) {
     }
     if (!slides[slideIndex - 1]) return;
     slides[slideIndex - 1].style.display = 'flex';
-    dots[slideIndex - 1].className += ' active';
+    dots[slideIndex - 1].className += 'active';
 }
