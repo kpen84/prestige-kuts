@@ -1,19 +1,21 @@
 document.getElementById('bookingForm').addEventListener('submit', function (event) {
-    console.log('looking for event');
     event.preventDefault();
 
-    const barber = document.querySelector('.barber').value;
     const customer = document.querySelector('.customer').value;
-    const apptype = document.querySelector('.apptype').value;
     const email = document.querySelector('.email').value;
+    const phone = document.querySelector('.phone').value;
+    const apptype = document.querySelector('.apptype').value;
     const date = document.getElementById('date').value;
+    console.log('test');
+    const time = document.getElementById('time').value;
 
     const data = {
-        barber,
         customer,
-        apptype,
         email,
+        phone,
+        apptype,
         date,
+        time,
     };
 
     fetch('/api', {

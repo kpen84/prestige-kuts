@@ -6,11 +6,12 @@ const Appointment = require('../models/appointment-model');
 router.post('/', async (req, res) => {
     console.log('Success');
     const data = new Appointment({
-        barber: req.body.barber,
         customer: req.body.customer,
         email: req.body.email,
+        phone: req.body.phone,
         apptype: req.body.apptype,
         date: req.body.date,
+        time: req.body.time,
     });
 
     try {

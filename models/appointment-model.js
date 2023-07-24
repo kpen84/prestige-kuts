@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const appointmentSchema = new mongoose.Schema({
-    barber: {
-        required: true,
-        type: String,
-    },
     customer: {
         required: true,
         type: String,
     },
     email: {
+        required: true,
+        type: String,
+    },
+    phone: {
         required: true,
         type: String,
     },
@@ -20,6 +20,10 @@ const appointmentSchema = new mongoose.Schema({
     date: {
         required: true,
         type: Date,
+    },
+    time: {
+        requiered: true,
+        type: String,
     },
 });
 
