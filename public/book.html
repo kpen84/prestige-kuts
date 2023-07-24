@@ -11,7 +11,15 @@
         <form id="bookingForm">
             <input type="text" class="barber" placeholder="Barber" required />
             <input type="text" class="customer" placeholder="Your Name" required />
-            <input type="text" class="apptype" placeholder="Appointment Type" required />
+                <select class="apptype" required>
+                    <option value="" disabled selected>Select Appointment Type</option>
+                    <option value="Haircut and Beard Trim $45">Haircut and Beard Trim $45</option>
+                    <option value="Haircut $35">Haircut $35</option>
+                    <option value="Line-up and Beard Trim $25">Line-up and Beard Trim $25</option>
+                    <option value="Line-up $15">Line-up $15</option>
+                    <option value="Beard Trim $17">Beard Trim $17</option>
+                    <option value="Kids Haircut $20">Kids Haircut $20</option>
+                </select>            
             <input type="email" class="email" placeholder="Your Email" required />
             <input type="datetime-local" id="date" required />
             <button type="submit">Book Appointment</button>

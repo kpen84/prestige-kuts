@@ -12,17 +12,17 @@ html {
     font-family: 'Poppins', sans-serif;
     min-width: 0;
     box-sizing: border-box;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
     list-style: none;
     text-decoration: none;
 }
 
-/*ul,
+ul,
 li,
 a{
   text-decoration: none;
   list-style: none;
-}*/
+}
 
 /*body{
     background-image: url(....images/background.jpg);
