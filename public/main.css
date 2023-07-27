@@ -27,13 +27,13 @@ button {
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
-  }
+}
 
 ul,
 li,
-a{
-  text-decoration: none;
-  list-style: none;
+a {
+    text-decoration: none;
+    list-style: none;
 }
 
 .main-content {
@@ -102,10 +102,7 @@ main {
 }
 
 .hbContainer {
-display: none;
-min-height: 1em;
-min-width: 1em;
-margin-left: 1em;
+    display: none;
 }
 
 #hbbutton {
@@ -114,50 +111,50 @@ margin-left: 1em;
     display: flex;
     padding: 0;
     background-color: black;
-  }
-
-svg{
-    background-color: black;
-    color: antiquewhite;
-    width: 100%;
-    height: 100%;
 }
 
-  .line {
+svg {
+    background-color: black;
+    color: antiquewhite;
+    width: 30%;
+    height: 30%;
+}
+
+.line {
     fill: none;
     stroke: antiquewhite;
     stroke-width: 6;
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .line1 {
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
     stroke-dasharray: 60 207;
     stroke-width: 6;
-  }
-  .line2 {
+}
+.line2 {
     stroke-dasharray: 60 60;
     stroke-width: 6;
-  }
-  .line3 {
+}
+.line3 {
     stroke-dasharray: 60 207;
     stroke-width: 6;
-  }
-  .opened .line1 {
+}
+.opened .line1 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
-  }
-  .opened .line2 {
+}
+.opened .line2 {
     stroke-dasharray: 1 60;
     stroke-dashoffset: -30;
     stroke-width: 6;
-  }
-  .opened .line3 {
+}
+.opened .line3 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
-  }
-  
+}
+
 /* Beginning Slideshow */
 
 /* Slideshow container */
@@ -173,15 +170,13 @@ svg{
 .slide-4-bg {
     z-index: -999;
     position: absolute;
-    top: 5%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-position: center;
     background-size: cover;
     image-rendering: optimizeQuality;
-
-
 }
 
 .mySlides .slide-1-bg .image,
@@ -189,10 +184,9 @@ svg{
 .mySlides .slide-3-bg .image,
 .mySlides .slide-4-bg .image {
     width: 100%;
-    width: 100%;
     object-fit: cover;
     height: 100%;
-    filter: brightness(.7);
+    filter: brightness(0.7);
 }
 
 /* Hide the ..images by default */
@@ -224,7 +218,7 @@ svg{
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -273,16 +267,16 @@ svg{
     .sideNav {
         display: flex;
     }
-    
-    .hbContainer{
+
+    .hbContainer {
         display: block;
     }
 
-    .address{
+    .address {
         display: none;
     }
 
-    .instagram{
+    .instagram {
         display: none;
     }
 
