@@ -1,16 +1,14 @@
 const button = document.getElementById('hbButton');
-const sideNav = document.querySelector('.sidenav');
+const sideNav = document.querySelector('.sideNav');
 
 button.addEventListener('click', () => {
     // Toggle the 'opened' class and set 'aria-expanded' attribute
     button.classList.toggle('opened');
     button.setAttribute('aria-expanded', button.classList.contains('opened'));
 
-    // Get the computed style of the sideNav element
     const computedStyle = getComputedStyle(sideNav);
     const leftPosition = computedStyle.getPropertyValue('left');
 
-    // Toggle the side navigation by checking the left position
     if (leftPosition === '-1000px') {
         sideNav.style.left = '0px';
     } else {

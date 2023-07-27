@@ -1,4 +1,4 @@
-//sidenav
+//sideNav
 
 function openNav() {
     document.getElementById('mySidenav').style.left = '0';

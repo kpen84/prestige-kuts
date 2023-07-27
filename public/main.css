@@ -12,9 +12,9 @@ html {
     font-family: 'Poppins', sans-serif;
     min-width: 0;
     box-sizing: border-box;
-    /* color: rgb(255, 255, 255); */
-    list-style: none;
+    color: antiquewhite;
     text-decoration: none;
+    list-style: none;
 }
 
 ul,
@@ -80,7 +80,7 @@ main {
     text-align: right;
 }
 
-.sidenav {
+.sideNav {
     position: relative;
     display: flex;
     z-index: 3000;
@@ -89,12 +89,12 @@ main {
 }
 
 .hbbutton {
-    background-color: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     padding: 0;
   }
+
   .line {
     fill: none;
     stroke: white;
@@ -139,11 +139,32 @@ main {
     display: flex;
 }
 
-.slide-1-bg {
-    background-image: url(../images/shop_floor.jpg);
-    background-size: cover;
-    overflow: hidden;
+.slide-1-bg,
+.slide-2-bg,
+.slide-3-bg,
+.slide-4-bg {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-position: center;
+    background-size: cover;
+    image-rendering: optimizeQuality;
+
+
+}
+
+.mySlides .slide-1-bg .image,
+.mySlides .slide-2-bg .image,
+.mySlides .slide-3-bg .image,
+.mySlides .slide-4-bg .image {
+    width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    filter: brightness(.7);
 }
 
 .slide-2-bg {
@@ -183,6 +204,7 @@ main {
 /* Next & previous buttons */
 .prev,
 .next {
+    z-index: 1000;
     cursor: pointer;
     position: absolute;
     top: 55%;
@@ -195,6 +217,9 @@ main {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Position the "next button" to the right */
