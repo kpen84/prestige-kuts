@@ -18,6 +18,7 @@ button.addEventListener('click', () => {
 
 //slideshow
 
+// Your existing JavaScript code
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -34,7 +35,6 @@ function currentSlide(n) {
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName('mySlides');
-    let dots = document.getElementsByClassName('dot');
     if (n > slides.length) {
         slideIndex = 1;
     }
@@ -42,13 +42,20 @@ function showSlides(n) {
         slideIndex = slides.length;
     }
     for (i = 0; i < slides.length; i++) {
-        if (!slides[i]) return;
         slides[i].style.display = 'none';
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(' active');
+    if (slides[slideIndex - 1]) {
+        slides[slideIndex - 1].style.display = 'flex';
     }
-    if (!slides[slideIndex - 1]) return;
-    slides[slideIndex - 1].style.display = 'flex';
-    dots[slideIndex - 1].className += 'active';
 }
+
+// Add event listeners to the "prev" and "next" buttons
+document.querySelector(".prev").addEventListener("click", function () {
+    plusSlides(-1);
+});
+
+document.querySelector(".next").addEventListener("click", function () {
+    plusSlides(1);
+});
+
+
