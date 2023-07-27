@@ -105,12 +105,13 @@ main {
     display: none;
 }
 
-#hbbutton {
+#hbButton {
     border: none;
     cursor: pointer;
     display: flex;
     padding: 0;
     background-color: black;
+    padding-left: 0.5em;
 }
 
 svg {
