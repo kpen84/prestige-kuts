@@ -2,7 +2,6 @@ const button = document.getElementById('hbButton');
 const sideNav = document.querySelector('.sideNav');
 
 button.addEventListener('click', () => {
-    // Toggle the 'opened' class and set 'aria-expanded' attribute
     button.classList.toggle('opened');
     button.setAttribute('aria-expanded', button.classList.contains('opened'));
 
@@ -18,7 +17,6 @@ button.addEventListener('click', () => {
 
 //slideshow
 
-// Your existing JavaScript code
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -27,7 +25,6 @@ function plusSlides(n) {
     showSlides((slideIndex += n));
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides((slideIndex = n));
 }
@@ -49,7 +46,6 @@ function showSlides(n) {
     }
 }
 
-// Add event listeners to the "prev" and "next" buttons
 document.querySelector(".prev").addEventListener("click", function () {
     plusSlides(-1);
 });
