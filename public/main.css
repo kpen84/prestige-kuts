@@ -95,9 +95,9 @@ main {
     justify-content: space-between;
     flex-wrap: nowrap;
     top: 0;
-    left: -1000px;
-    height: 100vh;
-    width: 100vw;
+    left: -1500px;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -167,7 +167,7 @@ svg{
 .slide-4-bg {
     z-index: -999;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     width: 100%;
     height: 100%;
