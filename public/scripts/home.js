@@ -8,10 +8,10 @@ button.addEventListener('click', () => {
     const computedStyle = getComputedStyle(sideNav);
     const leftPosition = computedStyle.getPropertyValue('left');
 
-    if (leftPosition === '-1000px') {
+    if (leftPosition === '-1500px') {
         sideNav.style.left = '0px';
     } else {
-        sideNav.style.left = '-1000px';
+        sideNav.style.left = '-1500px';
     }
 });
 
