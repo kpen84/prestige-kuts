@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-const appointmentRouter = require('./router/appointment-book');
+const appointmentRouter = require('./router/appointment-router');
 app.use('/api', appointmentRouter);
 
 const port = process.env.PORT || 3000;
