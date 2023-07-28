@@ -62,6 +62,7 @@ a {
 
 h1 {
     padding-top: 1em;
+    text-align: center;
 }
 
 h2,
@@ -102,6 +103,22 @@ main {
     padding: 1rem 1rem;
     display: flex;
     justify-content: space-between;
+    transition: 0.6s;
+    flex-wrap: nowrap;
+    border: none;
+    color: antiquewhite;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+}
+
+.navbar-book {
+    z-index: 998;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
     transition: 0.6s;
     flex-wrap: nowrap;
     border: none;
@@ -295,6 +312,12 @@ svg {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 1rem;
+}
+
+.book-bg {
+    position: absolute;
+    z-index: -1000;
+    size: contain;
 }
 
 #bookingForm {
