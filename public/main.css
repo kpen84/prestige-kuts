@@ -2,6 +2,10 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
+.confirmed {
+    background-color: black;
+}
+
 html {
     scroll-behavior: smooth;
     overflow: hidden;
@@ -11,12 +15,13 @@ html {
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Nunito', sans-serif;
     min-width: 0;
     box-sizing: border-box;
-    color: antiquewhite;
+    color: white;
     text-decoration: none;
     list-style: none;
+    text-shadow: 1px 1px 2px black;
 }
 
 button {
@@ -35,6 +40,17 @@ li,
 a {
     text-decoration: none;
     list-style: none;
+}
+
+h1 {
+    padding-top: 1em;
+}
+
+h2,
+p {
+    color: white;
+    padding-bottom: 1em;
+    text-align: center;
 }
 
 .main-content {
@@ -196,7 +212,7 @@ svg {
     width: 100%;
     object-fit: cover;
     height: 100%;
-    filter: brightness(0.5);
+    filter: brightness(0.4);
 }
 
 .mySlides {
