@@ -28,6 +28,7 @@ document.getElementById('bookingForm').addEventListener('submit', function (even
         .then((response) => response.json())
         .then((responseData) => {
             console.log(responseData);
+            
         })
         .catch((error) => {
             console.error(error);
