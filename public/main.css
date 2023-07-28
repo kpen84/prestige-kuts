@@ -163,7 +163,7 @@ main {
 .hbContainer {
     display: none;
     position: absolute;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 #hbButton {
@@ -234,7 +234,7 @@ svg {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 1);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .navLogo {
