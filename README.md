@@ -6,9 +6,11 @@ Client Website/Project
 
 ```
 npm install
-```
+
 
 npm run dev
+
+In your browser searchbar, type: "localhoast:3000" and it should take you to the homepage.
 
 ```
 
