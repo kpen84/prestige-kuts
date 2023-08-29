@@ -40,11 +40,11 @@ button {
     font-size: 1.5em;
     font-weight: 600;
     text-decoration: none;
-    border: 2px solid white;
-    padding: 0.5em 1em;
+    /* border: 2px solid white; */
+    padding: 0;
     border-radius: 5px;
     transition: 0.6s ease-in-out;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .book-button:hover {
@@ -288,7 +288,7 @@ svg {
     width: 100%;
     object-fit: cover;
     height: 100%;
-    filter: brightness(0.4);
+    filter: brightness(0.7);
 }
 
 .mySlides {
