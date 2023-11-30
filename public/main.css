@@ -227,7 +227,7 @@ svg {
     display: none;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-wrap: nowrap;
     top: 0;
     left: -1500px;
@@ -238,8 +238,8 @@ svg {
 }
 
 .navLogo {
-    height: 20%;
-    padding-bottom: 5em;
+    height: 35%;
+    padding-bottom: 3em;
 }
 
 .navItem {
@@ -301,7 +301,9 @@ svg {
 }
 
 .mySlides img {
-    height: 30%;
+    height: 45%;
+    max-height: 300px;
+    padding: none;
 }
 
 .prev,
@@ -315,7 +317,7 @@ svg {
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     transition: 0.8s ease;
     border-radius: 0 3px 3px 0;
     display: flex;
